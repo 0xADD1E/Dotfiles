@@ -1,4 +1,4 @@
-if command -sq colorlyne == 0
+if command -sq colorlyne
 	function fish_prompt
 		colorlyne
 	end

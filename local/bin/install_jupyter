@@ -1,0 +1,27 @@
+#!/bin/sh
+
+exists () {
+  type "$1" >/dev/null 2>/dev/null
+}
+
+if ! exists "stack"; then
+	echo "U gotta install stack"
+	echo "curl -sSL https://get.haskellstack.org/ | sh"
+	echo "brew install python3 zeromq libmagic cairo pkg-config haskell-stack pango"
+fi
+
+mkdir -p $HOME/.apps
+pushd $HOME/.apps
+
+git clone https://github.com/gibiansky/IHaskell
+cd IHaskell
+pip3 install --user -r requirements.txt
+stack install --fast
+ihaskell install --stack
+jupyter labextension install ihaskell_jupyterlab
+
+cd ..
+cargo install evcxr_jupyter
+evcxr_jupyter --install
+
+popd
