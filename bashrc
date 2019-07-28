@@ -1,5 +1,5 @@
 # .bashrc
-if [ $TERM = "xterm-kitty" ] ; then
+if [ $TERM = "xterm-kitty" ] || [ $TERM = "xterm-256color" ]; then
 	fish
 	exit
 fi
