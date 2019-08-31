@@ -1,4 +1,3 @@
-
 if stat $HOME/bin > /dev/null
 	set -gx PATH $HOME/bin $PATH
 end

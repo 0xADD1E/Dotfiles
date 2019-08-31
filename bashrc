@@ -1,5 +1,9 @@
 # .bashrc
 if [ $TERM = "xterm-kitty" ] || [ $TERM = "xterm-256color" ]; then
+	tmux
+	exit
+fi
+if [ $TERM = "screen" ]; then
 	fish
 	exit
 fi

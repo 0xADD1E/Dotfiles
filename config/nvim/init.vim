@@ -5,10 +5,20 @@ Plug 'joshdick/onedark.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'junegunn/fzf'
 
-Plug 'prabirshrestha/async.vim'
-Plug 'prabirshrestha/vim-lsp'
-Plug 'prabirshrestha/asyncomplete.vim'
-Plug 'prabirshrestha/asyncomplete-lsp.vim'
+"Plug 'prabirshrestha/async.vim'
+"Plug 'prabirshrestha/vim-lsp'
+"Plug 'prabirshrestha/asyncomplete.vim'
+"Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'itchyny/lightline.vim'
+Plug 'w0rp/ale'
+Plug 'machakann/vim-highlightedyank'
+Plug 'andymass/vim-matchup'
+
+Plug 'ncm2/ncm2'
+Plug 'roxma/nvim-yarp'
+Plug 'ncm2/ncm2-bufword'
+Plug 'ncm2/ncm2-tmux'
+Plug 'ncm2/ncm2-path'
 call plug#end()
 
 syntax on
