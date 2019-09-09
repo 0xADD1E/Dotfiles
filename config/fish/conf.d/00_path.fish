@@ -13,3 +13,6 @@ end
 if test -d $HOME/Library/Python/2.7/bin
 	set -gx PATH $HOME/Library/Python/2.7/bin $PATH
 end
+if test -d $HOME/Library/Python/3.7/bin
+	set -gx PATH $HOME/Library/Python/3.7/bin $PATH
+end
