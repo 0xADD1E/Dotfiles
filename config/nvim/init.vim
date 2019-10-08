@@ -1,6 +1,4 @@
-function! InitializeCoc()
-  call coc#util#install()
-  call coc#util#install_extensions([
+let g:coc_global_extensions = [ 
   \ 'coc-snippets',
   \ 'coc-json',
   \ 'coc-tsserver',
@@ -9,13 +7,12 @@ function! InitializeCoc()
   \ 'coc-yaml',
   \ 'coc-highlight',
   \ 'coc-vetur',
-  \ 'coc-rust-analyzer',
+  \ 'coc-rls',
   \ 'coc-python',
   \ 'coc-git',
-  \ 'coc-yank'
-  \ ])
-"'coc-rls',
-endfunction
+  \ 'coc-yank', 
+  \ ]
+"'coc-rust-analyzer'
 
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'vim-airline/vim-airline'
@@ -53,6 +50,7 @@ vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
 
 "COC Setup
+let g:airline#extensions#coc#enabled = 1
 nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
 "VSCode-esque completion
 inoremap <silent><expr> <TAB>
