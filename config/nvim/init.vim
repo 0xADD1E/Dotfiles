@@ -26,20 +26,23 @@ Plug 'w0rp/ale'
 Plug 'machakann/vim-highlightedyank'
 Plug 'andymass/vim-matchup'
 
-Plug 'neoclide/coc.nvim', {'do': { -> InitializeCoc() } }
+Plug 'neoclide/coc.nvim'
 
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
+
+Plug 'prettier/vim-prettier', {'do': 'yarn install', 'branch': 'release/1.x'}
 call plug#end()
 
 syntax on
 colorscheme onedark
+set guifont=Fira\ Code\ Medium:h10
 set hidden
 
 "If we weren't started on a file, open NERDTree
+
 autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
-"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif<Paste>
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 "Line Transpose Keybinds
 nnoremap <A-j> :m .+1<CR>==
@@ -65,3 +68,9 @@ function! s:check_back_space() abort
 endfunction
 
 let g:coc_snippet_next = '<tab>'
+
+"Prettier
+let g:prettier#config#print_width = 100
+let g:prettier#config#tab_width = 4
+let g:prettier#config#use_tabs = 'false'
+let g:prettier#config#single_quote = 'true'
