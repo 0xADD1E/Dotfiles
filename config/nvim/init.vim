@@ -27,7 +27,7 @@ Plug 'w0rp/ale'
 Plug 'machakann/vim-highlightedyank'
 Plug 'andymass/vim-matchup'
 
-Plug 'neoclide/coc.nvim'
+Plug 'neoclide/coc.nvim', {'do': 'yarn install'}
 
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
@@ -37,7 +37,8 @@ call plug#end()
 
 syntax on
 colorscheme onedark
-set guifont=Fira\ Code\ Medium:h10
+set guifont=Fira\ Code:h11
+set clipboard=unnamed
 set hidden
 
 "If we weren't started on a file, open NERDTree
