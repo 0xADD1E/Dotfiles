@@ -20,6 +20,7 @@ Plug 'joshdick/onedark.vim'
 
 Plug 'scrooloose/nerdtree'
 Plug 'junegunn/fzf'
+Plug 'christoomey/vim-tmux-navigator'
 
 Plug 'itchyny/lightline.vim'
 Plug 'w0rp/ale'
@@ -74,3 +75,18 @@ let g:prettier#config#print_width = 100
 let g:prettier#config#tab_width = 4
 let g:prettier#config#use_tabs = 'false'
 let g:prettier#config#single_quote = 'true'
+
+inoremap <Down> <Nop>
+inoremap <Left> <Nop>
+inoremap <Right> <Nop>
+inoremap <Up> <Nop>
+
+nnoremap <Down> <Nop>
+nnoremap <Left> <Nop>
+nnoremap <Right> <Nop>
+nnoremap <Up> <Nop>
+
+vnoremap <Down> <Nop>
+vnoremap <Left> <Nop>
+vnoremap <Right> <Nop>
+vnoremap <Up> <Nop>
