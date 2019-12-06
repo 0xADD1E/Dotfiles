@@ -16,6 +16,7 @@ let g:coc_global_extensions = [
 
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'vim-airline/vim-airline'
+Plug 'edkolev/tmuxline.vim'
 Plug 'joshdick/onedark.vim'
 
 Plug 'scrooloose/nerdtree'
@@ -41,8 +42,11 @@ set guifont=Fira\ Code:h11
 set clipboard=unnamed
 set hidden
 
-"If we weren't started on a file, open NERDTree
+"Airline Config
+let g:airline#extensions#tabline#enabled = 1
+let g:tmuxline_powerline_separators = 0
 
+"If we weren't started on a file, open NERDTree
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
@@ -77,6 +81,7 @@ let g:prettier#config#tab_width = 4
 let g:prettier#config#use_tabs = 'false'
 let g:prettier#config#single_quote = 'true'
 
+"Hard mode
 inoremap <Down> <Nop>
 inoremap <Left> <Nop>
 inoremap <Right> <Nop>
