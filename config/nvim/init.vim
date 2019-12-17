@@ -46,18 +46,6 @@ set hidden
 let g:airline#extensions#tabline#enabled = 1
 let g:tmuxline_powerline_separators = 0
 
-"If we weren't started on a file, open NERDTree
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-
-"Line Transpose Keybinds
-nnoremap <A-j> :m .+1<CR>==
-nnoremap <A-k> :m .-2<CR>==
-inoremap <A-j> <Esc>:m .+1<CR>==gi
-inoremap <A-k> <Esc>:m .-2<CR>==gi
-vnoremap <A-j> :m '>+1<CR>gv=gv
-vnoremap <A-k> :m '<-2<CR>gv=gv
-
 "COC Setup
 let g:airline#extensions#coc#enabled = 1
 nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
@@ -74,6 +62,9 @@ function! s:check_back_space() abort
 endfunction
 
 let g:coc_snippet_next = '<tab>'
+
+"Use the One True Indent(tm)
+set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 
 "Prettier
 let g:prettier#config#print_width = 100
