@@ -1,4 +1,4 @@
-let g:coc_global_extensions = [ 
+let g:coc_global_extensions = [
   \ 'coc-snippets',
   \ 'coc-json',
   \ 'coc-tsserver',
@@ -10,7 +10,7 @@ let g:coc_global_extensions = [
   \ 'coc-rls',
   \ 'coc-python',
   \ 'coc-git',
-  \ 'coc-yank', 
+  \ 'coc-yank',
   \ ]
 "'coc-rust-analyzer'
 
@@ -23,7 +23,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'junegunn/fzf'
 Plug 'christoomey/vim-tmux-navigator'
 
-Plug 'itchyny/lightline.vim'
 Plug 'w0rp/ale'
 Plug 'machakann/vim-highlightedyank'
 Plug 'andymass/vim-matchup'
@@ -32,23 +31,33 @@ Plug 'neoclide/coc.nvim', {'do': 'yarn install'}
 
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
-
-Plug 'prettier/vim-prettier', {'do': 'yarn install', 'branch': 'release/1.x'}
 call plug#end()
 
 syntax on
 colorscheme onedark
-set guifont=Fira\ Code:h11
+set guifont=Fira\ Code:h14
 set clipboard=unnamed
 set hidden
 
 "Airline Config
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 let g:tmuxline_powerline_separators = 0
+let g:airline_symbols.linenr = '№'
+let g:airline_symbols.maxlinenr = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.whitespace = 'Ξ'
 
 "COC Setup
 let g:airline#extensions#coc#enabled = 1
 nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
+command! -nargs=0 Format :call CocAction('format')
+command! -nargs=? Fold :call CocAction('fold', <f-args>)
+
 "VSCode-esque completion
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? coc#_select_confirm() :
