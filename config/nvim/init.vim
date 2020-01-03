@@ -23,7 +23,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'junegunn/fzf'
 Plug 'christoomey/vim-tmux-navigator'
 
-Plug 'itchyny/lightline.vim'
 Plug 'w0rp/ale'
 Plug 'machakann/vim-highlightedyank'
 Plug 'andymass/vim-matchup'
@@ -33,7 +32,10 @@ Plug 'neoclide/coc.nvim', {'do': 'yarn install'}
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 
-Plug 'prettier/vim-prettier', {'do': 'yarn install', 'branch': 'release/1.x'}
+Plug 'Chiel92/vim-autoformat'
+"dnf install clang
+"pip install autopep8
+"yarn global add js-beautify typescript-formatter remark-cli
 call plug#end()
 
 syntax on
@@ -49,6 +51,7 @@ let g:tmuxline_powerline_separators = 0
 "COC Setup
 let g:airline#extensions#coc#enabled = 1
 nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
+
 "VSCode-esque completion
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? coc#_select_confirm() :
@@ -66,11 +69,7 @@ let g:coc_snippet_next = '<tab>'
 "Use the One True Indent(tm)
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 
-"Prettier
-let g:prettier#config#print_width = 100
-let g:prettier#config#tab_width = 4
-let g:prettier#config#use_tabs = 'false'
-let g:prettier#config#single_quote = 'true'
+"Formatter
 
 "Hard mode
 inoremap <Down> <Nop>
