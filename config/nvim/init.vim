@@ -38,6 +38,8 @@ Plug 'Chiel92/vim-autoformat'
 "yarn global add js-beautify typescript-formatter remark-cli
 call plug#end()
 
+set ttimeoutlen=5
+
 syntax on
 colorscheme onedark
 set guifont=Fira\ Code:h14
