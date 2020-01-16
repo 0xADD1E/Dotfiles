@@ -1,9 +1,7 @@
 # .bashrc
-# Source global definitions
-if [ -f /etc/bashrc ]; then
-	. /etc/bashrc
+if hash genie 2>/dev/null && [ $(cat /proc/1/comm) != "systemd" ]; then
+    genie -s && exit;
 fi
-
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 [ -z "$TMUX"  ] && { tmux attach || exec tmux new-session && exit;}
