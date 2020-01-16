@@ -19,14 +19,11 @@ Plug 'vim-airline/vim-airline'
 Plug 'edkolev/tmuxline.vim'
 Plug 'joshdick/onedark.vim'
 
-Plug 'scrooloose/nerdtree'
-Plug 'junegunn/fzf'
+Plug 'easymotion/vim-easymotion'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'machakann/vim-highlightedyank'
 
 Plug 'w0rp/ale'
-Plug 'machakann/vim-highlightedyank'
-Plug 'andymass/vim-matchup'
-
 Plug 'neoclide/coc.nvim', {'do': 'yarn install'}
 
 Plug 'leafgarland/typescript-vim'
@@ -35,7 +32,8 @@ Plug 'peitalin/vim-jsx-typescript'
 Plug 'Chiel92/vim-autoformat'
 "dnf install clang
 "pip install autopep8
-"yarn global add js-beautify typescript-formatter remark-cli
+"yarn global add https://github.com/josephfrazier/prettier_d remark-cli
+"ln -s $HOME/.yarn/bin/prettier_d $HOME/.yarn/bin/prettier
 call plug#end()
 
 set ttimeoutlen=5
