@@ -81,6 +81,9 @@ let g:coc_snippet_next = '<tab>'
 set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 
 "Formatter
+au BufWrite * :Autoformat
+let g:formatdef_none = '"cat"'
+let g:formatters_asciidoc = ['none']
 
 "Hard mode
 inoremap <Down> <Nop>
