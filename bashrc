@@ -1,6 +1,6 @@
 # .bashrc
 export LANG="en_US.UTF-8"
-if hash genie 2>/dev/null && [ $(cat /proc/1/comm) != "systemd" ]; then
+if hash genie 2>/dev/null && [ -z $INSIDE_GENIE ]; then
     genie -s && exit;
 fi
 # If not running interactively, don't do anything
