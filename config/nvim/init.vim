@@ -1,17 +1,17 @@
 let g:coc_global_extensions = [
-  \ 'coc-snippets',
-  \ 'coc-json',
-  \ 'coc-tsserver',
-  \ 'coc-html',
-  \ 'coc-css',
-  \ 'coc-yaml',
-  \ 'coc-highlight',
-  \ 'coc-vetur',
-  \ 'coc-rls',
-  \ 'coc-python',
-  \ 'coc-git',
-  \ 'coc-yank',
-  \ ]
+            \ 'coc-snippets',
+            \ 'coc-json',
+            \ 'coc-tsserver',
+            \ 'coc-html',
+            \ 'coc-css',
+            \ 'coc-yaml',
+            \ 'coc-highlight',
+            \ 'coc-vetur',
+            \ 'coc-rls',
+            \ 'coc-python',
+            \ 'coc-git',
+            \ 'coc-yank',
+            \ ]
 "'coc-rust-analyzer'
 
 call plug#begin('~/.local/share/nvim/plugged')
@@ -65,14 +65,14 @@ command! -nargs=? Fold :call CocAction('fold', <f-args>)
 
 "VSCode-esque completion
 inoremap <silent><expr> <TAB>
-      \ pumvisible() ? coc#_select_confirm() :
-      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
+            \ pumvisible() ? coc#_select_confirm() :
+            \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+            \ <SID>check_back_space() ? "\<TAB>" :
+            \ coc#refresh()
 
 function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
+    let col = col('.') - 1
+    return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
 let g:coc_snippet_next = '<tab>'
@@ -82,8 +82,7 @@ set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 
 "Formatter
 au BufWrite * :Autoformat
-let g:formatdef_none = '"cat"'
-let g:formatters_asciidoc = ['none']
+let g:autoformat_autoindent = 0
 
 "Hard mode
 inoremap <Down> <Nop>

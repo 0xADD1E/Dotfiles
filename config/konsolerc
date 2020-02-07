@@ -8,13 +8,15 @@ Width 1920=700
 [Favorite Profiles]
 Favorites=Addie.profile
 
+[KonsoleWindow]
+SaveGeometryOnExit=false
+ShowMenuBarByDefault=false
+
 [MainWindow]
-Height 1050=673
-Height 1080=1019
-Height 1200=673
 MenuBar=Disabled
-State=AAAA/wAAAAD9AAAAAAAAA0YAAAKhAAAABAAAAAQAAAAIAAAACPwAAAAA
+State=AAAA/wAAAAD9AAAAAAAAB4AAAASUAAAABAAAAAQAAAAIAAAACPwAAAAA
 ToolBarsMovable=Disabled
-Width 1680=838
-Width 1920=838
-Window-Maximized 1050x1680=true
+Window-Maximized 1200x1920=true
+
+[Notification Messages]
+ShowPasteUnprintableWarning=true
