@@ -1,0 +1,6 @@
+#!/bin/sh
+
+yarn global add https://github.com/josephfrazier/prettier_d remark-cli
+pushd $(which prettier_d |rev|cut -d'/' -f2-|rev)
+ln -s $(pwd)/prettier_d prettier
+popd

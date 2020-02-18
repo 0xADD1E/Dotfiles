@@ -1,0 +1,3 @@
+#!/bin/sh
+gem install asciidoctor asciidoctor-pdf asciidoctor-diagram
+

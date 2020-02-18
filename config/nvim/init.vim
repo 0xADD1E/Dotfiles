@@ -1,5 +1,8 @@
+" Troubleshooting:
+" If you're getting a blank screen on startup that you can C-c out of
+" Make sure your clipboard providers are set up correctly
+" IE on WSL, win32yank IS installed, xsel IS NOT
 let g:coc_global_extensions = [
-            \ 'coc-snippets',
             \ 'coc-json',
             \ 'coc-tsserver',
             \ 'coc-html',
@@ -12,7 +15,7 @@ let g:coc_global_extensions = [
             \ 'coc-git',
             \ 'coc-yank',
             \ ]
-"'coc-rust-analyzer'
+" Once it stabilizes, it'd be nice to add 'coc-rust-analyzer'
 
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'vim-airline/vim-airline'
@@ -24,14 +27,13 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'machakann/vim-highlightedyank'
 
 Plug 'w0rp/ale'
-Plug 'neoclide/coc.nvim', {'do': 'yarn install'}
+Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 
 Plug 'Chiel92/vim-autoformat'
-"dnf install clang
-"pip install autopep8
+" Make sure clang, and black are installed
 "yarn global add https://github.com/josephfrazier/prettier_d remark-cli
 "ln -s $HOME/.yarn/bin/prettier_d $HOME/.yarn/bin/prettier
 call plug#end()
@@ -41,7 +43,7 @@ set ttimeoutlen=5
 syntax on
 colorscheme onedark
 set guifont=Fira\ Code:h14
-set clipboard=unnamed
+set clipboard+=unnamedplus
 set hidden
 
 "Airline Config
