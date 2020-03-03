@@ -93,6 +93,7 @@ Color=220,223,228
 
 [General]
 Blur=true
+ColorRandomization=false
 Description=One Half Dark
 Opacity=0.75
 Wallpaper=
