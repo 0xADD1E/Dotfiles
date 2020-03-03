@@ -22,11 +22,11 @@ Plug 'vim-airline/vim-airline'
 Plug 'edkolev/tmuxline.vim'
 Plug 'joshdick/onedark.vim'
 
-Plug 'easymotion/vim-easymotion'
+Plug 'justinmk/vim-sneak'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'machakann/vim-highlightedyank'
 
-Plug 'w0rp/ale'
+"Plug 'w0rp/ale'
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 
 Plug 'leafgarland/typescript-vim'
@@ -45,6 +45,13 @@ colorscheme onedark
 set guifont=Fira\ Code:h14
 set clipboard+=unnamedplus
 set hidden
+
+"Let's actually start using sneak
+let g:sneak#label = 1
+map f <Plug>Sneak_f
+map F <Plug>Sneak_F
+map s <Plug>Sneak_s
+map S <Plug>Sneak_S
 
 "Airline Config
 if !exists('g:airline_symbols')
