@@ -3,4 +3,5 @@ if ! stat ~/.cargo/bin/cargo; then
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 fi
 ~/.cargo/bin/cargo install colorlyne cargo-update cargo-bloat cargo-flamegraph evcxr_jupyter sccache systemfd vape
+~/.cargo/bin/cargo +nightly install-update racer
 ~/.cargo/bin/cargo install-update -a
