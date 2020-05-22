@@ -4,3 +4,5 @@
         email = developer@0xADD1E.me
 [alias]
         lg = log --pretty=oneline --graph --abbrev-commit --branches
+[pull]
+	rebase = true

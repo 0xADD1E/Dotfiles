@@ -10,12 +10,11 @@ let g:coc_global_extensions = [
             \ 'coc-yaml',
             \ 'coc-highlight',
             \ 'coc-vetur',
-            \ 'coc-rls',
+            \ 'coc-rust-analyzer',
             \ 'coc-python',
             \ 'coc-git',
             \ 'coc-yank',
             \ ]
-" Once it stabilizes, it'd be nice to add 'coc-rust-analyzer'
 
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'vim-airline/vim-airline'
