@@ -1,3 +1,3 @@
-#!/bin/sh
+#!/bin/bash
 gem install asciidoctor asciidoctor-pdf asciidoctor-diagram
 

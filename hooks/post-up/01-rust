@@ -1,6 +1,7 @@
-#!/bin/sh
-if ! stat ~/.cargo/bin/cargo; then
+#!/bin/bash
+if ! hash cargo 2> /dev/null; then
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+    source ~/.cargo/env
 fi
-~/.cargo/bin/cargo install colorlyne cargo-update cargo-bloat cargo-flamegraph evcxr_jupyter sccache systemfd vape
-~/.cargo/bin/cargo install-update -a
+cargo install colorlyne cargo-update cargo-bloat cargo-flamegraph evcxr_jupyter sccache systemfd vape
+cargo install-update -a
