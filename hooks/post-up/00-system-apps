@@ -2,8 +2,8 @@
 [[ "$(uname)" = "Darwin" ]] && {
     brew tap homebrew/cask-fonts
     brew tap vapor/tap
-    brew install neovim yarn fish bat exa tokei hyperfine fd fzf tmux cmake aria2 youtube-dl meson mosh python3 ripgrep rsync plantuml graphviz vapor/tap/vapor
-    brew cask install gitup db-browser-for-sqlite iterm2 middleclick provisionql riot sf-symbols signal wwdc font-fira-code
+    brew install neovim yarn fish bat exa tokei hyperfine fd fzf tmux cmake aria2 youtube-dl meson mosh python3 ripgrep rsync plantuml graphviz vapor/tap/vapor dust
+    brew cask install gitup db-browser-for-sqlite iterm2 middleclick provisionql riot sf-symbols signal font-fira-code
     brew upgrade
     [[ "$(which gem)" != "/usr/local/opt/ruby/bin/gem" ]] && echo 'export PATH="/usr/local/opt/ruby/bin:$PATH"' >> ~/.zshrc
 }
