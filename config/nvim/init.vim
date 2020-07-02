@@ -12,6 +12,10 @@ let g:coc_global_extensions = [
             \ 'coc-vetur',
             \ 'coc-rust-analyzer',
             \ 'coc-python',
+            \ 'coc-clangd',
+            \ 'coc-eslint',
+            \ 'coc-sourcekit',
+            \ 'coc-sql',
             \ 'coc-git',
             \ 'coc-yank',
             \ ]
@@ -21,11 +25,10 @@ Plug 'vim-airline/vim-airline'
 Plug 'edkolev/tmuxline.vim'
 Plug 'joshdick/onedark.vim'
 
-Plug 'justinmk/vim-sneak'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'machakann/vim-highlightedyank'
 
-"Plug 'w0rp/ale'
+Plug 'tpope/vim-fugitive'
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 
 Plug 'leafgarland/typescript-vim'
