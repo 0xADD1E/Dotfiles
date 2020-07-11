@@ -3,4 +3,4 @@ if ! hash cargo 2> /dev/null; then
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
     source ~/.cargo/env
 fi
-cargo install colorlyne cargo-bloat cargo-flamegraph evcxr_jupyter sccache systemfd vape bat exa tokei hyperfine fd-find ripgrep
+cargo install colorlyne cargo-bloat cargo-flamegraph evcxr_jupyter sccache systemfd vape bat exa tokei hyperfine fd-find ripgrep du-dust
