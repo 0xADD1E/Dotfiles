@@ -1,11 +1,11 @@
 # This is Git's per-user configuration file.
 [user]
-    name = Addie Morrison
-    email = developer@0xADD1E.me
+	name = Addie Morrison
+	email = developer@0xADD1E.me
 [alias]
-    lg = log --pretty=oneline --graph --abbrev-commit --branches
-    fetchall = fetch --prune --tags
+	lg = log --pretty=oneline --graph --abbrev-commit --branches
+	fetchall = fetch --prune --tags
 [pull]
-    rebase = true
+	rebase = true
 [core]
 	autocrlf = input
