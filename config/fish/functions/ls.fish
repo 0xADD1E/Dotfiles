@@ -1,4 +1,6 @@
 # Defined in - @ line 1
-function ls --description 'alias ls exa'
-	exa --git-ignore  $argv;
+if command -sq exa
+	function ls --description 'alias ls exa'
+		exa --git-ignore  $argv;
+	end
 end

@@ -7,3 +7,5 @@
     fetchall = fetch --prune --tags
 [pull]
     rebase = true
+[core]
+	autocrlf = input
