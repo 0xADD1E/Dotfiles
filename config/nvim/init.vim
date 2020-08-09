@@ -9,7 +9,6 @@ let g:coc_global_extensions = [
             \ 'coc-css',
             \ 'coc-yaml',
             \ 'coc-highlight',
-            \ 'coc-vetur',
             \ 'coc-rust-analyzer',
             \ 'coc-python',
             \ 'coc-clangd',
@@ -22,14 +21,13 @@ let g:coc_global_extensions = [
 
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'vim-airline/vim-airline'
-Plug 'edkolev/tmuxline.vim'
 Plug 'joshdick/onedark.vim'
 
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'machakann/vim-highlightedyank'
 
 Plug 'tpope/vim-fugitive'
-Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
@@ -48,12 +46,6 @@ set guifont=Fira\ Code:h14
 set clipboard+=unnamedplus
 set hidden
 
-"Let's actually start using sneak
-let g:sneak#label = 1
-map f <Plug>Sneak_f
-map F <Plug>Sneak_F
-map s <Plug>Sneak_s
-map S <Plug>Sneak_S
 
 "Airline Config
 if !exists('g:airline_symbols')
