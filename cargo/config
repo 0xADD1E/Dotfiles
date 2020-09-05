@@ -1,2 +1,5 @@
 [build]
 target-dir = ".cache/cargo"
+
+[target.x86_64-pc-windows-msvc.libsqlite3-sys]
+rustc-link-search = ["C:/Libraries"]

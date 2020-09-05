@@ -1,6 +1,11 @@
 # Defined in - @ line 2
-if test (uname) != 'Darwin'
-    function open --description 'alias open xdg-open'
+if test (uname) = 'Linux'
+    function open
         xdg-open  $argv;
+    end
+end
+if test "$OS" = 'Windows_NT'
+    function open
+        explorer $argv;
     end
 end
