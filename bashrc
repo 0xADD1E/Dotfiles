@@ -5,8 +5,8 @@ if hash genie 2>/dev/null && [ -z $INSIDE_GENIE ]; then
 fi
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
+export TERM=screen-256color
 [ -z "$TMUX"  ] && { tmux attach || exec tmux new-session && exit;}
-export TERM=tmux-256color
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
 # export SYSTEMD_PAGER=
 
