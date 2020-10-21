@@ -1,4 +1,4 @@
 #!/bin/bash
-sudo pip3 install --upgrade pip
-pip3 install --user isort pylint black jupyter jupyterlab neovim
+sudo pip3 install --upgrade pip wheel
+pip3 install --user matplotlib NeuroTools isort pylint black jupyter jupyterlab neovim magic-wormhole
 pip3 list --outdated --format=freeze | grep -v '^\-e' | grep -v 'libcomps' | cut -d = -f 1  | xargs -n1 pip3 install --user -U
