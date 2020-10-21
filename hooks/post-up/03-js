@@ -1,6 +1,6 @@
 #!/bin/bash
 sudo npm install -g yarn
 yarn global add https://github.com/josephfrazier/prettier_d remark-cli
-pushd $(which prettier_d |rev|cut -d'/' -f2-|rev)
+pushd $(yarn global dir)/node_modules/.bin
 ln -s $(pwd)/prettier_d prettier
 popd
