@@ -9,3 +9,5 @@
 	rebase = true
 [core]
 	autocrlf = input
+[init]
+	defaultBranch = trunk

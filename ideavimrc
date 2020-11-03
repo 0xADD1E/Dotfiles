@@ -1,0 +1,6 @@
+set highlightedyank
+set clipboard
+set relativenumber
+set clipboard+=unnamed
+
+:map \r :action com.dubreuia.core.action.ShortcutAction<CR>
