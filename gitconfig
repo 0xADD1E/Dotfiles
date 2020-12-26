@@ -1,13 +1,21 @@
 # This is Git's per-user configuration file.
 [user]
-	name = Addie Morrison
-	email = developer@0xADD1E.me
+    name = Kája Lišková
+    email = developer@0xADD1E.me
 [alias]
-	lg = log --pretty=oneline --graph --abbrev-commit --branches
-	fetchall = fetch --prune --tags
+    lg = log --pretty=oneline --graph --abbrev-commit --branches
+    fetchall = fetch --prune --tags
 [pull]
-	rebase = true
+    rebase = true
 [core]
-	autocrlf = input
+    autocrlf = input
+    excludesFile = ~/.gitignore
 [init]
-	defaultBranch = trunk
+    defaultBranch = trunk
+[http]
+    cookiefile = /Users/kaja/.gitcookies
+[filter "lfs"]
+    process = git-lfs filter-process
+    required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
