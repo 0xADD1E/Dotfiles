@@ -1,4 +1,6 @@
 # Defined in - @ line 1
-function vim --description 'alias vim nvim'
-	nvim  $argv;
+if command -sq nvim
+	function vim --description 'alias vim nvim'
+		nvim  $argv;
+	end
 end
