@@ -1,7 +1,7 @@
 #!/bin/bash
-sudo npm install -g yarn
+yarn -v||npm install -g yarn||sudo npm install -g yarn
 yarn config set prefix $HOME/.local
 yarn global add https://github.com/josephfrazier/prettier_d
 pushd $(yarn global bin)
-ln -s $(pwd)/prettier_d prettier
+ln -sf $(pwd)/prettier_d prettier
 popd

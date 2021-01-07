@@ -1,11 +1,8 @@
 #!/bin/bash
 [[ "$(uname)" = "Darwin" ]] && {
-    brew tap homebrew/cask-fonts
-    brew tap vapor/tap
-    brew install neovim fish fzf tmux cmake aria2 youtube-dl meson mosh python3 rsync plantuml graphviz vapor/tap/vapor
-    brew cask install gitup db-browser-for-sqlite iterm2 middleclick provisionql riot sf-symbols signal font-fira-code
     brew upgrade
-    [[ "$(which gem)" != "/usr/local/opt/ruby/bin/gem" ]] && echo 'export PATH="/usr/local/opt/ruby/bin:$PATH"' >> ~/.zshrc
+    sh ~/.brew/install_brew.sh
+    defaults write com.visualstudio.code.oss ApplePressAndHoldEnabled -bool false
 }
 [[ "$(uname)" = "Linux" ]] && {
     hash dnf 2>/dev/null && {

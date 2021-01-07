@@ -1,3 +1,14 @@
 #!/bin/bash
-gem install asciidoctor asciidoctor-pdf asciidoctor-diagram
+[[ "$(uname)" = "Darwin" ]] && {
+    export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+}
 
+cat << EOGEMS | xargs gem install --pre --user
+asciidoctor
+asciidoctor-pdf
+asciidoctor-diagram
+EOGEMS
+
+cat << EOGEMS | xargs gem install --user
+foreman
+EOGEMS

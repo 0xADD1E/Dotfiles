@@ -3,4 +3,21 @@ if ! hash cargo 2> /dev/null; then
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
     source ~/.cargo/env
 fi
-cargo install colorlyne cargo-bloat cargo-flamegraph evcxr_jupyter sccache systemfd vape bat exa tokei hyperfine fd-find ripgrep du-dust
+cat << EOPACKAGES | xargs cargo install
+colorlyne
+cargo-bloat
+flamegraph
+evcxr_jupyter
+systemfd
+vape
+bat
+exa
+tokei
+hyperfine
+fd-find
+ripgrep
+ripgrep_all
+du-dust
+EOPACKAGES
+CFG_RELEASE=nightly CFG_RELEASE_CHANNEL=nightly cargo install --git https://github.com/rust-lang/rustfmt.git --locked --features rustfmt,cargo-fmt
+cargo install --git https://github.com/phiresky/ripgrep-all
